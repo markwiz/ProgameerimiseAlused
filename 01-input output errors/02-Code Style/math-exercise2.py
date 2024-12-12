@@ -1,33 +1,20 @@
-"""Math exercises vol2."""
+def ask_name_and_greet_user(THABsss):
+    """
+    Ask name and greet user.
 
+    The user has to enter his/her name. The function prints the greeting.
 
-def time_converter(seconds: int) -> str:
-    """Convert time in seconds to hours and minutes."""
-    # Write your code here
-    minutes = seconds // 60
-    hours = minutes // 60
-    remaining_minutes = minutes % 60
-    return f"{seconds} sekundit on {hours} tund(i) ja {remaining_minutes} minut(it)."
+    Regular greeting: Hi, [name]. Would you like to have a Hamburger?
+    [name] is capitalized, meaning first letter is capital, the rest is lower.
 
+    If the name is Thanos (case insensitive, so thanos and THANOS also count):
+    Get out of here, Thanos! Nobody wants to play with you!
+    """
+    # code here
+    name = input("What is your name?: ")
+    capitalized_named = name.capitalize()
+    if capitalized_named:
+        print(f"Hi, {capitalized_named}. Would you like to have a hamburger?")
+    else:
+        print("Get out of here, Thanos! Nobody wants to play with you!")
 
-def student_helper(angle: int) -> str:
-    """Return the sine and cosine of the given angle in degrees."""
-    # Write your code here
-    import math
-    sine = round(math.sin(math.radians(angle)), 1)
-    cosine = round(math.cos(math.radians(angle)), 1)
-    return f"Nurk: {angle}, siinus: {sine}, koosinus: {cosine}."
-
-
-def greetings(n: int) -> str:
-    """Return a string that contains "Hey" n times."""
-    # Write your code here
-    lots_of_heys = n * "Hey"
-    return lots_of_heys
-
-
-def adding_numbers(num_a: int, num_b: int) -> str:
-    """Return given numbers added together as a string."""
-    # Write your code here
-    string_numbers = str(num_a) + str(num_b)
-    return string_numbers
